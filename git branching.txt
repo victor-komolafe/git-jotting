@@ -1,0 +1,38 @@
+master branch is the original branch of a repositories
+
+when we create a new branch, at first the files/codes will be replicas but as continous changes are made on the new branch, they would be seen on the branch instead of the main
+
+we use branching to test run codes before merging back to main branch to avoid fatal errors or mistakes from affecting main code
+
+we use git branch to view the branches made
+the syntax; git checkout nameofBranch,  is what we use to switch between branches, 
+to just check with the branches availalbe we use "git checkout",
+an asterick infront of the branch signifies the one you are currently in
+
+to create a new branch we use; git checkout -b nameOfNewBranch
+
+to merge branches or codes together we use the git merge nameofBranch;
+git diff nameofBranch shows/compares the two codes, prior and post the update
+
+to move code/updates to github we use git push... but now weve created a new branch we would have to specify which branch we want to push to... which would be our branch name, so syntax would be; git push (--set upstream or)-u origin nameOfBranch
+
+A pull request(pr) is a request to have your code pulled into another branch such as from another branch to your master branch. With this, anyone can review your code, make comments or ask questions
+once pr is merged to main, you would delete the branch 
+
+We can do a pull request from Github. 
+After pull is done and edits are made we use the git pull origin local master or git pull (if an upstream is set already)
+to update the code on our master branch locally to what we have on github
+
+we use git branch -d nameOfBranch to delete the branch after merge and pull is complete
+
+there are cases when multiple changes have been made from different people on a code, git doesnt know which code is redundant so we manually do it
+
+if we've modified a file(i.e just made changes into an already existing file) 
+, we can use; git commit -am "description" (to commit and add, where a stands for add and m for message)
+
+as changes are made to master branch by other people, you would wnat to merge then to your local master;
+we use syntax from our local branch;git merge master
+if merging conflix arises, the easiest way to solve is by going to the code itself and save the changes in the code
+we need to then make a commit after merging files
+
+

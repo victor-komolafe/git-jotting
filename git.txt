@@ -1,0 +1,57 @@
+Git commands
+clone - bring a repository that is hosted somewhere like Github into a folder on your machine
+add - track your files and changes in Git
+commit - save your files in Git
+push - upload git commits to a remote repo like Github
+pull - download changes from remote repo to local machine
+
+when in a folder;
+in terminal;
+git status shows all the files updated or deleted but hasnt been commited 
+git add tracks a file its changes to it. 
+we can use the "git add ." to track all files listed from the git status command
+after add,
+we use the git commit -m "comment/summary" 	this saves files and changes to Git with a comment 
+we can added more comments or a description to the first comment with another -m " "
+
+
+all this is done on our git locally
+to make it update on github we use;
+git push origin master
+now we have successfully updated our git hub
+
+to locally use git in a file that does have git and was created locally and push it to a remote location:
+we use; git init in the cd of that file
+after that we can use normal git commands but an error arises when we try to push it live to git hub;
+"fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+and the repository exists."
+
+this error is due to the file not being connected to anything;
+we can fix this by creating a new repository in git hub and then using the syntax in our cl;
+git remote add origin sshlinkofnewrepository	//the remote signifies not on the computer but from somewhere else
+the git remove -v shows all remote repositories connected to repo
+
+now we can use our; git push origin master
+we can use shortcut of "git push -u origin master once" where u is for upstream to always use origin master as default location and from there just use git push henceforth
+
+
+github workflow;
+write code - commit changes(here committing does both add and commit) , no need to push because we are already working live from git-hub - make a pull request(if working with external repo before merge)
+
+local git work flow;
+write code -stage changes(git add) - commit changes - git push(updates githubs files based from that done locally - make a pull request 
+
+
+
+
+ssh keys are what git hub uses to recognize that its you
+generating an ssh key
+we use the syntax in git bash; ssh-keygen -t ed25519 -C "your_email@example.com" 
+with our github email in the email section
+it would then generate the key and ask for an folder to save it in;
+you can to view to file which we saved our key
+you would find two both with the same name; one with the name only(private) and the other with an .pub extention which stands for public key
+the public key is the one put on our git hub
+the private key is the one we have to keep secured on our local machine for when we want to make changes to git hub using our local machine to show git hub
