@@ -1,0 +1,15 @@
+git reset or git reset nameofFile can be used to undue commiting or staging mistakes we make
+
+git reset HEAD ~1 can be used to undo the most recent commit
+ 
+we use git log to view all commits; 
+git uses specialnumbers and letters as keys to represent each commit, you can use
+
+git reset specificCommitKey, to reset commit to a time prior that commit;
+this undoes all the commits prior to that time but the codes would be unaffected,
+To undo including the code we use;
+git reset --hard specificCommitKey
+
+Git Forking;
+This is used to copy codes or repositories from ohter users you have no access to. 
+It creates a personal copy of that repo
